@@ -1,12 +1,11 @@
 import './lockedex.css';
 
-function Lockedex() {
+export default function Lockedex(props) {
     return (
-        <div className='contaner-lockedex' >
+        <div className='container-lockedex' >
             <div className='screen-lockedex'>
-                hola mundo
+                {props.children}
             </div>
         </div>
     )
 }
-export default Lockedex;
