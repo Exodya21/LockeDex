@@ -8,11 +8,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .screen-pokedex {
-    background-image: url('../../assets/bg-screen-pokedex.svg');
+    background-image: url('../../../assets/bg-screen-pokedex.svg');
     background-repeat: no-repeat;
     background-size: contain;
 

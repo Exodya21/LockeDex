@@ -1,9 +1,10 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Pokedex from './Components/pokedex';
+import Pokedex from './Components/pokedex/pokedex';
 import Lockedex from './Components/Layouts/lockedex';
 import Login from './Components/login/login';
 import PokemonHeader from './Components/headers/pokedexHeader';
+import Register from './Components/register/register';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
               <Route path='/' element={<Login />} />
                 <Route index element={<Login />} />
                 <Route path="*" element={<p>404 not Found</p>} />
+
+                <Route path='/register' element={<Register />} />
             </Routes>
           </BrowserRouter>
         </Lockedex>

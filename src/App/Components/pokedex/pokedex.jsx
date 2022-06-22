@@ -1,5 +1,5 @@
 import './pokedex.css';
-import Chat from './chat/chat';
+import Chat from '../chat/chat';
 
 function Pokedex() {
     return (

@@ -1,31 +1,38 @@
 import PokemonHeader from '../headers/pokemonHeader';
 import ButtonSumbit from '../buttons/buttonSumbit';
 import { Link } from 'react-router-dom';
-import './login.css';
+import '../login/login.css';
 import { useState } from 'react';
 import Loading from '../ux/loading';
 
-export default function Login() {
+export default function Register() {
 
+    const [name, setName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     
 
-    const loginSubmit = (e) => {
+    const registerSubmit = (e) => {
         e.preventDefault()
 
-        let res = {email, password}
+        let res = {name, email, password}
 
         console.log(res);
     }
 
     return (
         <div className='containerLogIn'>
-            <PokemonHeader text={'Log In'} />
+            <PokemonHeader text={'Register'} />
 
-            <p className='formTitleLogIn'>¿ Quieres jugar a un locke ?</p>
-            <form className='formLogIn' onSubmit={loginSubmit}>
+            <p className='formTitleLogIn'>¿ Eres nuevo ? Bienvenido.</p>
+            <form className='formLogIn' onSubmit={registerSubmit}>
                 <div>
+                    <input 
+                        type="text"  
+                        placeholder='Nombre de usuario'
+                        defaultValue={'jaume21'}
+                        onChange={ (e) => setName(e.target.value) }
+                        />
                     <input 
                         type="email"  
                         placeholder='Correo electrónico'
@@ -43,9 +50,9 @@ export default function Login() {
                 <Loading />
 
                 <div>
-                    <Link to='/register'> <p className='linkRegister'>Registrate si aún no lo estas</p> </Link>
+                    <Link to='/'> <p className='linkRegister'>¿ Ya tienes un perfil ?</p> </Link>
 
-                    <ButtonSumbit text={'Entrar'} />
+                    <ButtonSumbit text={'Registrate'} />
                 </div>
             </form>
         </div>
