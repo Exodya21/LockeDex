@@ -1,0 +1,49 @@
+.header-lockeDex {
+    /* background-color:  rgba(137, 43, 226, 0.388); */
+    background-color: #C20625;
+  
+    width: 50%;
+    height: 6%;
+  
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 5px solid #000000;
+  
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    align-items: center;
+
+}
+
+.cam {
+    background: #4AA4D0;
+    
+    border: 2px solid rgba(220, 176, 199, 1);
+    border-radius: 100%;
+
+    width: 1.1rem;
+    height: 1.1rem;
+
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.container-mini-lights {
+    width: 8%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.mini-light {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.red { background-color: #FF6775;}
+.yellow { background-color: #FFCC47;}
+.green { background-color: #A5BC80;}

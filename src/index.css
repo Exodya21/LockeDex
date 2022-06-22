@@ -25,10 +25,10 @@ body {
 }
 
 #root {
-  background-image: url('./assets/lockeDex.svg');
+  /* background-image: url('./assets/lockeDex.svg');
   background-repeat: no-repeat;
   background-size: contain;
-  background-position-x: center;
+  background-position-x: center; */
 
   width: 98vw;
   height: 95vh;

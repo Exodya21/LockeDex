@@ -6,20 +6,6 @@
   height: 100%;
 }
 
-.header-lockeDex {
-  background-color:  rgba(137, 43, 226, 0.388);
-  background: #C20625;
-
-  width: 50%;
-  height: 6%;
-
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom: 5px solid #000000;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .all-dex {
   display: flex;
   flex-direction: row;

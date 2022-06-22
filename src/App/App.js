@@ -3,13 +3,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Pokedex from './Components/pokedex';
 import Lockedex from './Components/Layouts/lockedex';
 import Login from './Components/login/login';
+import PokemonHeader from './Components/headers/pokedexHeader';
 
 function App() {
   return (
     <div className="App">
-      <header className='header-lockeDex'>
-        hola mundo
-      </header>
+      <PokemonHeader />
       <main className='all-dex'>
         <Pokedex />
         <Lockedex>

@@ -1,0 +1,57 @@
+.footer-pokedex {
+    display: flex;
+    justify-content: space-between;
+
+    width: 90%;
+}
+
+.form-chat {
+    width: 100%;
+
+    margin-top: 1.5rem;
+}
+
+.chat {
+    width: 90%;
+}
+
+.screen-messages {
+    width: 100%;
+    height: 100px;
+
+    background: #4DB05E;
+    border: 3px solid #000000;
+    box-shadow: inset 0px 3px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 15px 15px 0px 0px;
+}
+
+.chatting {
+    background: #DEFFE4;
+    border: 2px solid #000000;
+    border-radius: 0px 0px 15px 15px;
+
+    width: 100%;
+}
+
+.chatting input{
+    width: 80%;
+
+    padding-left: 10px;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    background-color: transparent;
+}
+
+.chatting button{
+    width: 20%;
+
+    border: none;
+    background-color: transparent;
+}
+
+.footer-pokedex img {
+    width: 25%;
+}

@@ -1,6 +1,138 @@
 .container-pokedex {
-    background-color: rgba(0, 255, 255, 0.489);
+    /* background-color: rgba(0, 255, 255, 0.489); */
+    background-color:  #DD092E;
 
     width: 50%;
     height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
+
+.screen-pokedex {
+    background-image: url('../../assets/bg-screen-pokedex.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    width: 90%; 
+    height: 45%;
+
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen {
+    background: #8CBADC;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    width: 90%;
+    height: 65%;
+
+    margin-top: 1rem;
+}
+
+.lights-red-green {
+    width: 15%;
+
+    display: flex;
+    justify-content: space-around;
+
+    margin-top: 0.7rem;
+}
+
+.light-off {
+    background-color: #E3042F;
+
+    width: 0.9rem;
+    height: 0.9rem;
+
+    border-radius: 100%;
+}
+
+.light-on {
+    background-color: #15cf00;
+
+    width: 0.9rem;
+    height: 0.9rem;
+
+    border-radius: 100%;
+}
+
+.buttons-pokedex {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.btns-pk {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-grey {
+    background: #0C3753;
+    box-shadow: 0px 4px 4px #3E1127;
+
+    border: none;
+    border-radius: 100%;
+
+    width: 4rem;
+    height: 4rem;
+}
+
+.buttons-large {
+    margin-left: 2rem;
+    
+    width: 40%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-yellow {
+    background: #FEC53A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border: none;
+    border-radius: 30px;
+
+    width: 3.5rem;
+    height: 0.7rem;
+}
+
+.btn-grey2 {
+    background: #1E3149;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    border: none;
+    border-radius: 30px;
+
+    width: 3.5rem;
+    height: 0.7rem;
+}
+
+.searcher {
+    background: #FBFFFD;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    border: none;
+    border-radius: 8px;
+    outline: none;
+
+    width: 70%;
+    height: 2rem;
+
+    margin-top: 1.5rem;
+    padding-left: 10px;
+
+    font-family: var(--font);
+    font-size: larger;
+}
+
