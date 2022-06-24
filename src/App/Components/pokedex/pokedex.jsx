@@ -23,7 +23,7 @@ function Pokedex() {
                         <button className='btn-grey2'></button>
                     </div>
                 </div>
-                <input className='searcher' type="text" spellcheck="false" />
+                <input className='searcher' placeholder={'Busca un pokemon...'} type="text" spellcheck="false" />
             </div>
 
             <Chat />
