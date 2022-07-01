@@ -8,7 +8,7 @@ export default function Chat() {
                 <div className='chat'>
                     <div className='screen-messages'></div>
                     <div className='chatting'>
-                        <input type="text" spellcheck="false" />
+                        <input type="text" spellCheck="false" />
                         <button>Enviar</button>
                     </div>
                 </div>

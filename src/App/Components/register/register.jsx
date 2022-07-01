@@ -1,6 +1,6 @@
 import PokemonHeader from '../headers/pokemonHeader';
 import ButtonSumbit from '../buttons/buttonSumbit';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import '../login/login.css';
 import { useState } from 'react';
 import Loading from '../ux/loading';
