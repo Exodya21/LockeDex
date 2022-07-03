@@ -1,24 +1,30 @@
 import PokemonHeader from '../headers/pokemonHeader';
 import ButtonSumbit from '../buttons/buttonSumbit';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../login/login.css';
 import { useState } from 'react';
 import Loading from '../ux/loading';
+import { sigIn } from '../../../services/authUser';
 
 export default function Register() {
 
-    const [name, setName] = useState();
+    const [nickname, setName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     
+    // let navigate = useNavigate();
 
     const registerSubmit = (e) => {
         e.preventDefault()
 
-        let res = {name, email, password}
+        let data = {nickname, email, password}
 
-        console.log(res);
+        console.log(data);
+        sigIn(data).then( res => console.log(res) )
+
+        // navigate('/lockes')
     }
+
 
     return (
         <div className='containerLogIn'>
@@ -27,21 +33,23 @@ export default function Register() {
             <p className='formTitleLogIn'>¿ Eres nuevo ? Bienvenido.</p>
             <form className='formLogIn' onSubmit={registerSubmit}>
                 <div>
-                    <input 
+                    <input
+                        required 
                         type="text"  
                         placeholder='Nombre de usuario'
-                        defaultValue={'jaume21'}
+                        // defaultValue={'jaume21'}
                         onChange={ (e) => setName(e.target.value) }
                         />
                     <input 
+                        required
                         type="email"  
                         placeholder='Correo electrónico'
-                        defaultValue={'jaume@gmail.com'}
+                        // defaultValue={'jaume@gmail.com'}
                         onChange={ (e) => setEmail(e.target.value) }
                         />
                     <input 
                         type="password"  
-                        defaultValue={'123456789'}
+                        // defaultValue={'123456789'}
                         placeholder='Contraseña'
                         onChange={ (e) => setPassword(e.target.value) }
                         />

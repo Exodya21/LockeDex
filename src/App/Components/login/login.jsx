@@ -29,7 +29,7 @@ export default function Login() {
             <form className='formLogIn' onSubmit={loginSubmit}>
                 <div>
                     <input 
-                        type="email"  
+                        type="text"  
                         placeholder='Correo electrónico'
                         defaultValue={'jaume@gmail.com'}
                         onChange={ (e) => setEmail(e.target.value) }
