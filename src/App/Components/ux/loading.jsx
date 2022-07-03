@@ -1,14 +1,21 @@
 import './loading.css';
 import pikahuGift from '../../../assets/pikachu-running.gif';
 
-export default function Loading() {
+export default function Loading( {boolean} ) {
 
     let text = 'Cargando...';
 
     return (
         <div>
-            <img className='pikachuGif' src={pikahuGift} alt="pikahuGift" />
-            <p>{text}</p>
+            {
+                boolean == true ?
+                <div> 
+                    <img className='pikachuGif' src={pikahuGift} alt="pikahuGift" />
+                    <p>{text}</p>
+                </div>
+                :
+                <div></div>
+            }
         </div>
     )
 }

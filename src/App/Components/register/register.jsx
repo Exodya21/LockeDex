@@ -4,25 +4,40 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../login/login.css';
 import { useState } from 'react';
 import Loading from '../ux/loading';
-import { sigIn } from '../../../services/authUser';
+import { signIn } from '../../../services/authUser';
 
 export default function Register() {
 
-    const [nickname, setName] = useState();
+    const [nickname, setNickname] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-    
-    // let navigate = useNavigate();
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('')
+
+    let navigate = useNavigate();
 
     const registerSubmit = (e) => {
         e.preventDefault()
 
+        setLoading(true)
         let data = {nickname, email, password}
 
         console.log(data);
-        sigIn(data).then( res => console.log(res) )
+        signIn(data)
+            .then( res => {
 
-        // navigate('/lockes')
+                console.log(res.data)
+
+                res.data.success ?
+                    setMessage(res.data.success)
+                :
+                    setMessage(res.data.error)
+
+                return res.data
+            })
+            .then( res => {
+                if (res.success) navigate('/') 
+            })
     }
 
 
@@ -38,7 +53,7 @@ export default function Register() {
                         type="text"  
                         placeholder='Nombre de usuario'
                         // defaultValue={'jaume21'}
-                        onChange={ (e) => setName(e.target.value) }
+                        onChange={ (e) => setNickname(e.target.value) }
                         />
                     <input 
                         required
@@ -48,6 +63,7 @@ export default function Register() {
                         onChange={ (e) => setEmail(e.target.value) }
                         />
                     <input 
+                        required 
                         type="password"  
                         // defaultValue={'123456789'}
                         placeholder='Contraseña'
@@ -55,8 +71,12 @@ export default function Register() {
                         />
                 </div>
 
-                <Loading />
-
+                {
+                    message == '' ? 
+                        <Loading boolean={loading}/>
+                    :
+                        <p>{message}</p>
+                }               
                 <div>
                     <Link to='/'> <p className='linkRegister'>¿ Ya tienes un perfil ?</p> </Link>
 
